@@ -1,6 +1,7 @@
 # Nasir Hayat — DevOps & DevSecOps Engineer
 
 [![ATS Score: 95+](https://img.shields.io/badge/ATS--Optimized-100%25-brightgreen.svg)](#)
+[![Build & Release Resume PDF](https://github.com/nasirhayat028/devops-resume/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/nasirhayat028/devops-resume/actions/workflows/build-pdf.yml)
 [![Format: PDF & HTML](https://img.shields.io/badge/Format-PDF%20%7C%20HTML%20%7C%20Markdown-blue.svg)](#)
 [![Pages: Exactly 2](https://img.shields.io/badge/Pages-2%20(A4)-blueviolet.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -13,7 +14,7 @@ This repository contains the source code, build automation, and compiled deliver
 
 | Document | Format | Description |
 | :--- | :---: | :--- |
-| **[Nasir_Hayat_Master_Resume.pdf](./Nasir_Hayat_Master_Resume.pdf)** | `PDF (A4)` | **Flagship 2-page master resume**, pixel-perfect typography, strictly formatted for international & remote roles. |
+| **[Nasir_Hayat_Master_Resume.pdf](./Nasir_Hayat_Master_Resume.pdf)** ([Direct Download](https://github.com/nasirhayat028/devops-resume/releases/tag/latest)) | `PDF (A4)` | **Flagship 2-page master resume**, pixel-perfect typography, strictly formatted for international & remote roles. |
 | **[Nasir_Hayat_Master_Resume.html](./Nasir_Hayat_Master_Resume.html)** | `HTML` | Semantic HTML template with corporate design system and custom print styles. |
 | **[Nasir_Hayat_Master_Resume.md](./Nasir_Hayat_Master_Resume.md)** | `Markdown` | ATS-first plain markdown source for instant job portal parsing and copy-pasting. |
 | **[generate_master_resume.py](./generate_master_resume.py)** | `Python` | Automated Qt/PySide6 rendering engine producing exact 595x842 pt A4 vector PDFs. |
