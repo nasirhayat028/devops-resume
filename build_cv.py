@@ -243,7 +243,7 @@ def create_docx(docx_path):
     apply_font(r_peks_t, bold=True, size=Pt(9.0))
     r_peks_s = p_peks.add_run(" | ")
     apply_font(r_peks_s, bold=False, size=Pt(9.0))
-    add_hyperlink(p_peks, "https://github.com/nasirhayat028/notes-webapp", "GitHub")
+    add_hyperlink(p_peks, "https://github.com/nasirhayat028/notes-app-aws-eks-deployment", "GitHub")
 
     add_bullet([("Provisioned an Amazon EKS cluster inside a custom VPC configured with subnets, route tables, and a NAT Gateway", False)])
     add_bullet([("Containerized frontend and backend services using Docker and pushed application images to Amazon ECR", False)])
@@ -573,7 +573,7 @@ def generate_html(html_path):
   <div class="section-title">PROJECTS</div>
 
   <div class="entry-block">
-    <div class="project-title"><strong>AWS EKS Infrastructure &amp; Application Deployment</strong> | <a href="https://github.com/nasirhayat028/notes-webapp">GitHub</a></div>
+    <div class="project-title"><strong>AWS EKS Infrastructure &amp; Application Deployment</strong> | <a href="https://github.com/nasirhayat028/notes-app-aws-eks-deployment">GitHub</a></div>
     <ul class="bullet-list">
       <li>Provisioned an Amazon EKS cluster inside a custom VPC configured with subnets, route tables, and a NAT Gateway</li>
       <li>Containerized frontend and backend services using Docker and pushed application images to Amazon ECR</li>
