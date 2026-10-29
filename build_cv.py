@@ -116,7 +116,7 @@ def create_docx(docx_path):
     # Job Title: BOLD 10.2pt
     p_title = doc.add_paragraph()
     format_p(p_title, space_before=0, space_after=1.6, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
-    r_title = p_title.add_run("DevOps & DevSecOps Engineer")
+    r_title = p_title.add_run("DevOps Engineer")
     apply_font(r_title, bold=True, size=Pt(10.2))
 
     # Contact line: Location, Phone, Email, LinkedIn, GitHub
@@ -137,7 +137,7 @@ def create_docx(docx_path):
     p_sum = doc.add_paragraph()
     format_p(p_sum, space_before=0.5, space_after=1.8, line_spacing=1.11)
     r_sum = p_sum.add_run(
-        "DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, "
+        "Junior DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, "
         "and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including "
         "SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. "
         "Hands-on practice with Linux, AWS cloud services, and secure containerized deployments."
@@ -219,9 +219,9 @@ def create_docx(docx_path):
     add_section_heading("TRAINING", space_before=4.5, space_after=1.6)
     p_tr = doc.add_paragraph()
     format_p(p_tr, space_before=0.5, space_after=0.8, line_spacing=1.11)
-    r_tr_b = p_tr.add_run("AWS re/Start Graduate")
+    r_tr_b = p_tr.add_run("AWS re/Start Program")
     apply_font(r_tr_b, bold=True, size=Pt(9.0))
-    r_tr_m = p_tr.add_run(" | LearnTechGlobal (AWS re/Start program) | Aug 2026 – Present")
+    r_tr_m = p_tr.add_run(" | LearnTechGlobal (AWS re/Start program) | Aug 2026 – Nov 2026 (Expected)")
     apply_font(r_tr_m, bold=False, size=Pt(9.0))
 
     add_bullet([("Completing an intensive cloud skills program covering Linux, networking, security fundamentals, and core AWS services (EC2, VPC, S3, IAM, CloudWatch).", False)])
@@ -296,7 +296,7 @@ def generate_html(html_path):
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Nasir Hayat - DevOps &amp; DevSecOps Engineer CV</title>
+<title>Nasir Hayat - DevOps Engineer CV</title>
 <style>
   @font-face {{
     font-family: 'Carlito';
@@ -485,7 +485,7 @@ def generate_html(html_path):
   <!-- HEADER -->
   <div class="header">
     <div class="name">Nasir Hayat</div>
-    <div class="title">DevOps &amp; DevSecOps Engineer</div>
+    <div class="title">DevOps Engineer</div>
     <div class="contact-line">
       <span>Peshawar, Pakistan</span>
       <span class="sep">|</span>
@@ -502,7 +502,7 @@ def generate_html(html_path):
   <!-- PROFESSIONAL SUMMARY -->
   <div class="section-title">PROFESSIONAL SUMMARY</div>
   <div class="summary-text">
-    DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. Hands-on practice with Linux, AWS cloud services, and secure containerized deployments.
+    Junior DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. Hands-on practice with Linux, AWS cloud services, and secure containerized deployments.
   </div>
 
   <!-- EDUCATION -->
@@ -547,7 +547,7 @@ def generate_html(html_path):
   <!-- TRAINING -->
   <div class="section-title">TRAINING</div>
   <div class="entry-block">
-    <div class="entry-title"><strong>AWS re/Start Graduate</strong> | LearnTechGlobal (AWS re/Start program) | Aug 2026 – Present</div>
+    <div class="entry-title"><strong>AWS re/Start Program</strong> | LearnTechGlobal (AWS re/Start program) | Aug 2026 – Nov 2026 (Expected)</div>
     <ul class="bullet-list">
       <li>Completing an intensive cloud skills program covering Linux, networking, security fundamentals, and core AWS services (EC2, VPC, S3, IAM, CloudWatch).</li>
       <li>Performing hands-on labs in live AWS environments via the Canvas learning platform, including launching and configuring an EC2 web server with User Data (Apache) and Security Groups, monitoring it with EC2 status checks and CloudWatch metrics, resizing instance and EBS volume, enabling and disabling Termination Protection, and building a VPC with public and private subnets, an Internet Gateway, and route tables, troubleshooting SSH connectivity through the route table.</li>
