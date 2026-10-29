@@ -71,7 +71,7 @@ def create_docx(docx_path):
         pPr.append(pBdr)
         return p
 
-    def add_hyperlink(paragraph, url, text, color="0563C1", underline=True, font_size=Pt(9.0)):
+    def add_hyperlink(paragraph, url, text, color="000000", underline=True, font_size=Pt(9.0)):
         part = paragraph.part
         r_id = part.relate_to(url, docx.opc.constants.RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
         sz_val = int(font_size.pt * 2)
@@ -116,34 +116,28 @@ def create_docx(docx_path):
     # Job Title: BOLD 10.2pt
     p_title = doc.add_paragraph()
     format_p(p_title, space_before=0, space_after=1.6, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
-    r_title = p_title.add_run("Junior DevOps & DevSecOps Engineer")
+    r_title = p_title.add_run("DevOps & DevSecOps Engineer")
     apply_font(r_title, bold=True, size=Pt(10.2))
 
-    # Contact line 1: Location, Phone, Email
-    p_c1 = doc.add_paragraph()
-    format_p(p_c1, space_before=0, space_after=0.8, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
-    r_loc = p_c1.add_run("Peshawar, Pakistan | +92 333 9495197 | ")
+    # Contact line: Location, Phone, Email, LinkedIn, GitHub
+    p_c = doc.add_paragraph()
+    format_p(p_c, space_before=0, space_after=2.0, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
+    r_loc = p_c.add_run("Peshawar, Pakistan | +92 333 9495197 | ")
     apply_font(r_loc, bold=False, size=Pt(9.0))
-    add_hyperlink(p_c1, "mailto:nasirhayat.dev@gmail.com", "nasirhayat.dev@gmail.com")
-
-    # Contact line 2: GitHub full URL, LinkedIn full URL
-    p_c2 = doc.add_paragraph()
-    format_p(p_c2, space_before=0, space_after=2.0, line_spacing=1.0, align=WD_ALIGN_PARAGRAPH.CENTER)
-    r_gh_l = p_c2.add_run("GitHub: ")
-    apply_font(r_gh_l, bold=False, size=Pt(9.0))
-    add_hyperlink(p_c2, "https://github.com/nasirhayat028", "github.com/nasirhayat028")
-    r_sep = p_c2.add_run(" | ")
-    apply_font(r_sep, bold=False, size=Pt(9.0))
-    r_li_l = p_c2.add_run("LinkedIn: ")
-    apply_font(r_li_l, bold=False, size=Pt(9.0))
-    add_hyperlink(p_c2, "https://www.linkedin.com/in/nasir-hayat-4515202a2", "linkedin.com/in/nasir-hayat-4515202a2")
+    add_hyperlink(p_c, "mailto:nasirhayat.dev@gmail.com", "nasirhayat.dev@gmail.com")
+    r_sep1 = p_c.add_run(" | ")
+    apply_font(r_sep1, bold=False, size=Pt(9.0))
+    add_hyperlink(p_c, "https://www.linkedin.com/in/nasir-hayat-4515202a2", "LinkedIn")
+    r_sep2 = p_c.add_run(" | ")
+    apply_font(r_sep2, bold=False, size=Pt(9.0))
+    add_hyperlink(p_c, "https://github.com/nasirhayat028", "GitHub")
 
     # 2. PROFESSIONAL SUMMARY
     add_section_heading("PROFESSIONAL SUMMARY", space_before=4.2, space_after=1.6)
     p_sum = doc.add_paragraph()
     format_p(p_sum, space_before=0.5, space_after=1.8, line_spacing=1.11)
     r_sum = p_sum.add_run(
-        "Junior DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, "
+        "DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, "
         "and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including "
         "SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. "
         "Hands-on practice with Linux, AWS cloud services, and secure containerized deployments."
@@ -302,7 +296,7 @@ def generate_html(html_path):
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Nasir Hayat - Junior DevOps &amp; DevSecOps Engineer CV</title>
+<title>Nasir Hayat - DevOps &amp; DevSecOps Engineer CV</title>
 <style>
   @font-face {{
     font-family: 'Carlito';
@@ -360,7 +354,7 @@ def generate_html(html_path):
     line-height: 1.2;
   }}
   .contact-line a {{
-    color: #0563C1;
+    color: #000000;
     text-decoration: underline;
   }}
   .sep {{
@@ -456,7 +450,7 @@ def generate_html(html_path):
     font-weight: bold;
   }}
   .project-title a {{
-    color: #0563C1;
+    color: #000000;
     text-decoration: underline;
     font-weight: normal;
   }}
@@ -491,25 +485,24 @@ def generate_html(html_path):
   <!-- HEADER -->
   <div class="header">
     <div class="name">Nasir Hayat</div>
-    <div class="title">Junior DevOps &amp; DevSecOps Engineer</div>
+    <div class="title">DevOps &amp; DevSecOps Engineer</div>
     <div class="contact-line">
       <span>Peshawar, Pakistan</span>
       <span class="sep">|</span>
       <span>+92 333 9495197</span>
       <span class="sep">|</span>
       <a href="mailto:nasirhayat.dev@gmail.com">nasirhayat.dev@gmail.com</a>
-    </div>
-    <div class="contact-line" style="margin-top: 1.0px;">
-      <span>GitHub: <a href="https://github.com/nasirhayat028">github.com/nasirhayat028</a></span>
       <span class="sep">|</span>
-      <span>LinkedIn: <a href="https://www.linkedin.com/in/nasir-hayat-4515202a2">linkedin.com/in/nasir-hayat-4515202a2</a></span>
+      <a href="https://www.linkedin.com/in/nasir-hayat-4515202a2">LinkedIn</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/nasirhayat028">GitHub</a>
     </div>
   </div>
 
   <!-- PROFESSIONAL SUMMARY -->
   <div class="section-title">PROFESSIONAL SUMMARY</div>
   <div class="summary-text">
-    Junior DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. Hands-on practice with Linux, AWS cloud services, and secure containerized deployments.
+    DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security practices, including SAST, secrets detection, container vulnerability scanning, and DAST, alongside declarative GitOps with Argo CD. Hands-on practice with Linux, AWS cloud services, and secure containerized deployments.
   </div>
 
   <!-- EDUCATION -->
