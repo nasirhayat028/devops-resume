@@ -7,7 +7,7 @@ Peshawar, Pakistan | +92 333 9495197
 ---
 
 ## PROFESSIONAL SUMMARY
-DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security (SAST, secrets detection, container scanning, and DAST) and declarative GitOps with Argo CD. Adept at bridging modern full-stack development and autonomous AI workflows with secure, reproducible containerized deployments and reliable Linux administration.
+DevOps & DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security (SAST, secrets detection, container scanning, and DAST) and declarative GitOps with Argo CD. Experienced in Linux administration, AWS cloud services, and secure containerized deployments.
 
 ---
 

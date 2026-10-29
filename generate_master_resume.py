@@ -239,7 +239,7 @@ def generate_master_resume_html():
       <tr><td class="section-title-cell">Professional Summary</td></tr>
     </table>
     <div class="summary-text">
-      DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security (SAST, secrets detection, container scanning, and DAST) and declarative GitOps with Argo CD. Adept at bridging modern full-stack development and autonomous AI workflows with secure, reproducible containerized deployments and reliable Linux administration.
+      DevOps &amp; DevSecOps Engineer skilled in automating CI/CD pipelines, securing cloud-native infrastructure, and managing Kubernetes workloads. Hands-on experience integrating shift-left security (SAST, secrets detection, container scanning, and DAST) and declarative GitOps with Argo CD. Experienced in Linux administration, AWS cloud services, and secure containerized deployments.
     </div>
   </div>
 
@@ -525,13 +525,14 @@ def build_pdf():
     html = generate_master_resume_html()
     
     # Save HTML file
-    html_path = "/home/nasir/Desktop/CV/Nasir_Hayat_Master_Resume.html"
+    repo_dir = os.path.dirname(os.path.abspath(__file__))
+    html_path = os.path.join(repo_dir, "Nasir_Hayat_Master_Resume.html")
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"Saved HTML to {html_path}")
 
     # Write PDF
-    pdf_path = "/home/nasir/Desktop/CV/Nasir_Hayat_Master_Resume.pdf"
+    pdf_path = os.path.join(repo_dir, "Nasir_Hayat_Master_Resume.pdf")
     doc = QTextDocument()
     doc.setDocumentMargin(0)
     
